@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  color: #24213a;
+  background: #f3f2ff;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(125, 99, 255, .18), transparent 28%),
+    radial-gradient(circle at 85% 80%, rgba(56, 189, 248, .15), transparent 30%),
+    #f6f5ff;
+}
+
+.counter-card {
+  width: min(100%, 440px);
+  padding: 42px 34px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e9e6ff;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(54, 43, 130, .12);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #6c55e8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(30px, 7vw, 40px);
+}
+
+.subtitle {
+  margin: 12px 0 28px;
+  color: #77748a;
+  line-height: 1.5;
+}
+
+.counter-display {
+  display: grid;
+  place-items: center;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 28px;
+  color: #654ee8;
+  background: #f0edff;
+  border: 5px solid #ded8ff;
+  border-radius: 50%;
+  font-size: 64px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  transition: transform .18s ease;
+}
+
+.counter-display.bump {
+  transform: scale(1.07);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+button {
+  min-width: 130px;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: 12px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:focus-visible {
+  outline: 3px solid #26204d;
+  outline-offset: 3px;
+}
+
+.increment-btn {
+  color: white;
+  background: linear-gradient(135deg, #765cf2, #5c46d9);
+  box-shadow: 0 8px 18px rgba(101, 78, 232, .25);
+}
+
+.reset-btn {
+  color: #5c46d9;
+  background: #efedff;
+}
+
+.hint {
+  margin: 24px 0 0;
+  color: #9996a8;
+  font-size: 12px;
+}
+
+@media (max-width: 420px) {
+  .counter-card { padding: 34px 22px; }
+  .counter-display { width: 145px; height: 145px; font-size: 54px; }
+}
